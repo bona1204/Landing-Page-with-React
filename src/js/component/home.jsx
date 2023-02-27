@@ -1,5 +1,5 @@
 import React from "react";
-
+import Navbar from "src/js/component/Navbar.jsx";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
