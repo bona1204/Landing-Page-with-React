@@ -16,7 +16,7 @@ const Card=(props)=>{
     <h5 className="card-title">{props.title}</h5>
     <p className="card-text">Some quick example text to build on the card title
      and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
+    <a href="#" className="btn btn-primary">{props.button}</a>
   </div>
 </div>
     )
@@ -26,7 +26,7 @@ Card.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     button: PropTypes.string,
-/*     style: PropTypes.object, */
+
 }; 
 
 export default Card;
