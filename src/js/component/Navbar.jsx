@@ -2,24 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 const Navbar = (props) => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark px-5">
+            <a className="navbar-brand text-white" href="#">{props.title}</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon text-white"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul className="navbar-nav mr-auto" >
+                    <li className="nav-item active">
+                        <a className="nav-link text-white" href="#">{props.label1}<span className="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                    <li className="nav-item">
+                        <a className="nav-link text-secondary" href="#">{props.label2}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                    <li className="nav-item">
+                        <a className="nav-link text-secondary" href="#">{props.label3}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                    <li className="nav-item">
+                        <a className="nav-link text-secondary" href="#">{props.label4}</a>
                     </li>
                 </ul>
             </div>
@@ -28,7 +30,10 @@ const Navbar = (props) => {
 }
 
 Navbar.propTypes = {
-    label: PropTypes.string,
-    number: PropTypes.string,
+    title: PropTypes.string,
+    label1: PropTypes.string,
+    label2: PropTypes.string,
+    label3: PropTypes.string,
+    label4: PropTypes.string,
 };
 export default Navbar;
